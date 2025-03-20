@@ -1,5 +1,6 @@
 package com.affortMedi.drive.numberAPI;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,4 +26,9 @@ public class NumberController {
 		return num.evenNumbers(start, end);
 	}
 	
+	
+	@GetMapping("/rand/{n}")
+	public List<Integer> randomNumberGeneration(@PathVariable Integer n) {
+		return num.randomNumber(n);
+	}
 }

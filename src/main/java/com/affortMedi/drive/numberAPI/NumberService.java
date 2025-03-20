@@ -38,4 +38,14 @@ public class NumberService {
 		
 		return list;
 	}
+	
+	public List<Integer> randomNumber(int n) {
+		List<Integer> rand = new ArrayList<>();
+		
+		for (int i = 0; i < n; i++) {
+			rand.add((int)(Math.random() * 100));
+		}
+		
+		return rand;
+	}
 }
