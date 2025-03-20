@@ -9,23 +9,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/test/users")
+@RequestMapping("/test")
 public class SocialController {
 	@Autowired
 	private SocialService ser;
 	
 	
-	@GetMapping
+	@GetMapping("/users")
 	public List<Users> getUsers() {
 		return ser.getUsers();
 	}
 	
-	@GetMapping("/{id}/posts")
+	@GetMapping("/users/{id}/posts")
 	public List<Posts> getPosts(@PathVariable Integer id) {
+		System.out.println(id);
 		return ser.getPosts(id);
 	}
 	
-	@GetMapping("/{id}/comments")
+	@GetMapping("/post/{id}/comments")
 	public List<Comments> getComments(@PathVariable Integer id) {
 		return ser.getComments(id);
 	}

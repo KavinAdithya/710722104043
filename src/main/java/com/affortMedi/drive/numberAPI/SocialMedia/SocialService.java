@@ -25,7 +25,7 @@ public class SocialService {
 	
 	public List<Posts> getPosts(int id) {
 		List<Posts> posts = new ArrayList<>();
-		for (Posts p : posts) {
+		for (Posts p : this.posts) {
 			if (p.getId() == id)
 				posts.add(p);
 		}
