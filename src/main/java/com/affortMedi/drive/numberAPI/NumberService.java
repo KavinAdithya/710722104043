@@ -29,7 +29,13 @@ public class NumberService {
 		
 	}
 	
-//	public List<Integer> evenNumbers(int start, int end) {
-//		List<Integer> list = new 
-//	}
+	public List<Integer> evenNumbers(int start, int end) {
+		List<Integer> list = new ArrayList<>();
+		
+		for (int i = start; i <= end; i += 2) {
+			list.add(i);
+		}
+		
+		return list;
+	}
 }

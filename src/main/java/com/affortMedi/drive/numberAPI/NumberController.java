@@ -22,7 +22,7 @@ public class NumberController {
 	
 	@GetMapping("/even/{start}/{end}")
 	public List<Integer> evenNumbers(@PathVariable Integer start, @PathVariable Integer end) {
-		return null;
+		return num.evenNumbers(start, end);
 	}
 	
 }
