@@ -1,4 +1,4 @@
-package com.affortMedi.drive.numberAPI.SocialMedia;
+package com.affortMedi.drive.SocialMedia;
 
 public class Users {
 	private int id;

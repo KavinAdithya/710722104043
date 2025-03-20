@@ -1,4 +1,4 @@
-package com.affortMedi.drive.numberAPI.SocialMedia;
+package com.affortMedi.drive.SocialMedia;
 
 import java.util.List;
 

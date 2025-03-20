@@ -1,33 +1,38 @@
-package com.affortMedi.drive.numberAPI.SocialMedia;
+package com.affortMedi.drive.SocialMedia;
 
-public class Posts {
+public class Comments {
 	private int id;
-	private int userId;
+	private int postId;
 	private String content;
-	public Posts(int id, int userId, String content) {
+	
+	public Comments(int id, int postId, String content) {
 		super();
 		this.id = id;
-		this.userId = userId;
+		this.postId = postId;
 		this.content = content;
 	}
+
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getUserId() {
-		return userId;
+
+	public int getPostId() {
+		return postId;
 	}
-	public void setUserId(int userId) {
-		this.userId = userId;
+
+	public void setPostId(int postId) {
+		this.postId = postId;
 	}
+
 	public String getContent() {
 		return content;
 	}
+
 	public void setContent(String content) {
 		this.content = content;
 	}
-	
-	
 }
