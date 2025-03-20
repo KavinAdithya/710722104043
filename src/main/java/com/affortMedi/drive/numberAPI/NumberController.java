@@ -1,7 +1,8 @@
 package com.affortMedi.drive.numberAPI;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,18 +18,24 @@ public class NumberController {
 	private NumberService num;
 	
 	@GetMapping("/fibo/{n}")
-	public List<Integer> fiboNumber(@PathVariable Integer n) {
-		return num.fibo(n);
+	public Map<String, List<Integer>> fiboNumber(@PathVariable Integer n) {
+		Map<String, List<Integer>> fibo = new HashMap<>();
+		fibo.put("numbers", num.fibo(n));
+		return fibo;
 	}
 	
 	@GetMapping("/even/{start}/{end}")
-	public List<Integer> evenNumbers(@PathVariable Integer start, @PathVariable Integer end) {
-		return num.evenNumbers(start, end);
+	public Map<String, List<Integer>> evenNumbers(@PathVariable Integer start, @PathVariable Integer end) {
+		Map<String, List<Integer>> even = new HashMap<>();
+		even.put("numbers", num.evenNumbers(start, end));
+		return even;
 	}
 	
 	
 	@GetMapping("/rand/{n}")
-	public List<Integer> randomNumberGeneration(@PathVariable Integer n) {
-		return num.randomNumber(n);
+	public Map<String, List<Integer>> randomNumberGeneration(@PathVariable Integer n) {
+		Map<String, List<Integer>> rand = new HashMap<>();
+		rand.put("numbers", num.randomNumber(n));
+		return rand;
 	}
 }
